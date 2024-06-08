@@ -1,0 +1,211 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(40,40,40);
+    color: #fff;
+    font-family: 'Puppins' ,sans-serif;
+}
+#header{
+    width: 100%;
+    height: 90vh;
+}
+#header .container{
+    padding: 10px 10%;
+}
+#header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#header nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav img{
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+    border-radius:2rem;
+    border: none;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 18px;
+    position: relative;
+    position:sticky;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background: rgb(4, 100, 244);
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.text h1 span{
+    color: rgb(4, 100, 244) ;
+
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    margin: 1rem;
+    width: 100%;
+    text-align: left;
+}
+.about1{
+    width: 100%;
+    display: flex;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    background: rgb(60,60,60);
+    text-align: left;
+}
+.des{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+}
+.about1 img{
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    border: none;
+}
+#about .container p{
+    margin: 1rem;
+    font-weight: 200;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Contact .connect{
+    margin: 1rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+#Contact .links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+}
+#Contact .links img{
+    object-fit: cover;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    display: flex;
+    margin-top: -1rem;
+    justify-content: space-between;
+}
+#Contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin: 1rem;
+}
+#Contact form input{
+    padding: 1.5rem;
+    width: 75vw;
+    border-radius: 1rem;
+    border: none;
+    margin: 0.5rem;
+    color: #fff;
+    background: rgb(90,90,90);
+}
+#Contact form textarea{
+    padding:1.5rem 2rem ;
+    width: 75vw;
+    border-radius: 1rem;
+    border: none;
+    margin: 0.5rem;
+    color: #fff;
+    background: rgb(90,90,90);
+}
+#Contact form button{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    width: 20rem;
+    padding: 2rem;
+    color: #fff;
+    font-size:2rem;
+    height: 2rem;
+    border-radius:1rem;
+    border: none;
+    background: rgb(6, 244, 6);
+}
+#newMsg{
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    color: green;
+}
+#pic
+{
+    height: 4rem;
+    width: 4rem;
+}
+#dropbtn{
+    display: none;
+    background: rgb(4, 100, 244);
+    border-radius: 1rem;
+    width: 8rem;
+}
+.dropdown .dropdown-menu{
+    color: #fff;
+    border: #fff;
+    background: #fff;
+}
+@media screen and (max-width:500px) {
+    #dropbtn{
+            display:flex ;
+    }
+    #navbar{
+        display: none;
+    }
+    #header{
+        height: 50rem;
+    }
+    
+}
