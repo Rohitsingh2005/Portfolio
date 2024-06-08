@@ -1,0 +1,144 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohit`s Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/me.jpg" alt="no image" class="me" />
+          <div id="navbar">
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropbtn">Menu
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+        </nav>
+        <div class="text">
+          <h1>
+            Hi, I`m <span>Rohit Singh</span><br />
+            from India.
+          </h1>
+          <p>Web developer</p>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="desc">
+        <h2>Skills</h2>
+        <p>Through continous learning and passionate towords my future I learn some languages which help me in the field of development.</p>
+        </div>
+        <div class="row">
+          <div class="about1">
+            <img src="./images/java.png" alt="java" />
+            <div class="des">
+              <h2>JAVA</h2>
+              <p class="skt">
+                Java is a multi-platform, object-oriented, and network-centric
+                language that can be used as a platform in itself
+              </p>
+            </div>
+          </div>
+          <div class="about1">
+            <img src="./images/js.png" alt="java" />
+            <div class="des">
+              <h2>JavaScript</h2>
+              <p class="skt">
+                JavaScript is a scripting language that enables you to create
+                dynamically updating content and pretty much everything else.
+              </p>
+            </div>
+          </div>
+          <div class="about1">
+            <img src="./images/database.png" alt="java" />
+            <div class="des">
+              <h2>MongoDb</h2>
+              <p class="skt">
+                MongoDB is an open-source, document-oriented database management
+                system (DBMS) that stores large amounts of data efficiently.
+              </p>
+            </div>
+          </div>
+          <div class="about1">
+            <img src="./images/physics.png" alt="java" />
+            <div class="des">
+              <h2>ReactJs</h2>
+              <p class="skt">
+                React is a JavaScript-based UI development library.
+              </p>
+            </div>
+          </div>
+          <div class="about1">
+            <img src="./images/nodejs.png" alt="java" />
+            <div class="des">
+              <h2>Node.Js</h2>
+              <p class="skt">
+                Node. js is an open-source, cross-platform JavaScript runtime
+                environment and library for running web applications outside the
+                client's browser.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="Contact">
+          <div class="footer">
+            
+            <div class="connect">
+              <h2>Contact Me</h2>
+              <p>Let`s connect to discuss the work oppertunities.</p>
+            </div>
+            <form name="submit-to-google-sheet">
+              <input type="text" name="name" placeholder="Your name" id="name">
+              <input type="email" name="Email" placeholder="Your Email" id="name">
+              <textarea rows="4" name="Msg" placeholder="Your message" id="name"></textarea>
+              <button value="Send" onclick="()=>{
+                document.getElementById('name').reset();
+              }">Submit</button>
+              <span id="newMsg"></span>
+            </form>
+            <div class="links">
+            <a href="https://www.linkedin.com/in/rohit-singh-7b5704258"><img src="./images/linkedin.png" alt="LinkedIn"/></a>
+            <a href="https://github.com/Rohitsingh2005"><img src="./images/github.png" alt="Github"/></a>
+            <a href="https://www.t.me/RohitSingh1007"><img src="./images/telegram.png" alt="Telegram"/></a>
+            <a href="https://www.instagram.com/thakur_boy._999/"><img src="./images/instagram.png" alt="Instagram"/></a>
+            </div> 
+          </div>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw7XRMY6J_NhvqpZg_nrymPNJcn48MBLsja5tmdf9TaIOWFl1e1NNO9Pj1v7i5n6RKo/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('newMsg');
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully!";
+          setTimeout(function(){
+            msg.innerHTML=" ";
+          },4000)
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  </body>
+</html>
